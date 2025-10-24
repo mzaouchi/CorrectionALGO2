@@ -1,0 +1,56 @@
+FUNCTION Somme(a : INTEGER, b: INTEGER) : INTEGER
+VAR
+    sum : INTEGER := 0;
+BEGIN
+    sum := a + b;
+    RETURN sum ;
+END
+
+FUNCTION SommeTab(t : ARRAY_OF INTEGER[];) : INTEGER
+VAR
+    sum : INTEGER := 0
+BEGIN
+    
+    FOR i FROM 1 TO t.length STEP 1  DO
+        sum := sum + t[i]
+    END_FOR
+    
+
+
+    RETURN sum ;
+END
+
+PROCEDURE ProSomme(a : INTEGER, b : INTEGER, VAR esommeelimechn5arajha : INTEGER)
+VAR
+   
+BEGIN
+    esommeelimechn5arajha := a+b;
+
+ 
+END
+
+
+ALGORITHM Principal
+VAR
+    d : ARRAY_OF INTEGER[] := [3,9,7,6];
+    x : INTEGER := 8
+    y : INTEGER := 23
+
+    stal : INTEGER := 0;
+BEGIN
+    Write(Somme(5,8));
+    Write(Somme(7,18));
+    Write(Somme(1,2));
+
+    Write(SommeTab([2,4,8,0,8]))
+    Write(SommeTab(d))
+
+    Write(Somme(x,y))
+
+    ProSomme(2,8, stal)
+
+    Write(stal)
+
+
+
+END
