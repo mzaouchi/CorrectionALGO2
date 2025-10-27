@@ -1,0 +1,32 @@
+FUNCTION DotProduct(a,b : ARRAY_OF INTEGER[]) : BOOLEAN
+VAR
+    sum : INTEGER = 0;
+BEGIN
+     FOR i FROM 1 TO b.length STEP 1  DO
+        sum := sum + a[i] * b[i]
+    END_FOR
+
+    IF (sum = 0) THEN
+        RETURN TRUE
+    ELSE
+        RETURN FALSE
+    END_IF
+END
+
+ALGORITHM Principal
+VAR
+    v1 : ARRAY_OF INTEGER[] = [5, 0, 7];
+    v2 : ARRAY_OF INTEGER[] = [0, 0, 7];
+    
+BEGIN
+
+    IF (v1.length <> v2.length OR v1.length < 2 OR v1.length> 3) THEN
+        Write("Error")
+    ELSE
+        Write(DotProduct(v1,v2))
+    END_IF
+
+
+
+   
+END
